@@ -25,22 +25,22 @@ Stretches for Stresses is a mobile application that would encourage and instruct
 
 **Required Must-have Stories**
 
-* Create Method to Prompt user with a timer for their stretches
-* Simulate how stretch is to be preformed
-* Milestone feature for when users complete a certain amount of stretches
-* Add motivation/encouraging quote of the day 
-* User can swipe to next stretch in app
-* User can select which area of the body they'd like to stretch
-* User can Log into and logout of app
-* User can Sign-up to app
-* Chime when open
-* Repository to view the previous stretches
+- [ ] Create Method to Prompt user with a timer for their stretches
+- [ ] Simulate how stretch is to be preformed
+- [ ] Milestone feature for when users complete a certain amount of stretches
+- [ ] Add motivation/encouraging quote of the day 
+- [ ] User can swipe to next stretch in app
+- [ ] User can select which area of the body they'd like to stretch
+- [x] User can Log into and logout of app
+- [x] User can Sign-up to app
+- [ ] Chime when open
+- [ ] Repository to view the previous stretches
 
 **Optional Nice-to-have Stories**
 
-* Display the day of the week
-* Skill levels ex. Beginner, Intermediate, Advanced
-* Blog, Areas for articles
+- [ ] Display the day of the week
+- [ ] Skill levels ex. Beginner, Intermediate, Advanced
+- [ ] Blog, Areas for articles
 
 ### 2. Screen Archetypes
 
@@ -86,9 +86,6 @@ Stretches for Stresses is a mobile application that would encourage and instruct
 ## Wireframes
 <img src="https://github.com/REM-Seminar/Stretches-For-Stresses/blob/main/Seminar_Wireframe.jpg" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 
 ## Schema 
 ### Models
@@ -227,4 +224,6 @@ query.getObjectInBackground (withId:"nIdwka") {email: [PFObject]?, error: Error?
 
 ```
 
-## Milestones
+## Progress Gifs
+### Login and Register Screens 
+<img src="https://github.com/REM-Seminar/Stretches_For_Stresses/blob/master/s4s.gif" width=600>
