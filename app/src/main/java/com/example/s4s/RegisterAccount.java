@@ -2,13 +2,21 @@ package com.example.s4s;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
+
 public class RegisterAccount extends AppCompatActivity {
 
+    public static final String TAG = "RegisterAccount";
     EditText userName;
     EditText userEmail;
     EditText userPassword;
@@ -28,5 +36,36 @@ public class RegisterAccount extends AppCompatActivity {
         goalsEntry = findViewById(R.id.goalsEntry);
         registerBTN = findViewById(R.id.registerBTN);
         imageView = findViewById(R.id.imageView);
+
+        registerBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username = userName.getText().toString();
+                String email = userEmail.getText().toString();
+                String password = userPassword.getText().toString();
+                newUser(username, email, password);
+            }
+        });
+    }
+
+    private void newUser(String username, String email, String password) {
+        ParseUser user = new ParseUser();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setEmail(email);
+        user.signUpInBackground(new SignUpCallback() {
+            public void done(ParseException e) {
+                if (e == null) {
+                    Log.e(TAG, "Issue with Login", e);
+                }
+                goMainActivity();
+            }
+        });
+    }
+
+    private void goMainActivity() {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish();
     }
 }
