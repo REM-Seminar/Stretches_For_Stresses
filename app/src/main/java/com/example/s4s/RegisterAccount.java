@@ -22,7 +22,7 @@ public class RegisterAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_account);
 
-        userName = findViewById(R.id.userName);
+        userName = findViewById(R.id.userEmail);
         userEmail = findViewById(R.id.userEmail);
         userPassword = findViewById(R.id.userPassword);
         goalsEntry = findViewById(R.id.goalsEntry);
