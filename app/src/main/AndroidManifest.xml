@@ -16,6 +16,9 @@
         android:theme="@style/Theme.S4S"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".FocusAreaActivity"
+            android:exported="true" />
+        <activity
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
