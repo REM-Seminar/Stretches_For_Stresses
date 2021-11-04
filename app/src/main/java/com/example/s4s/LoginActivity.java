@@ -40,9 +40,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "onClick login button");
-                String username = userEmail.getText().toString();
+                String email = userEmail.getText().toString();
                 String password = userPassword.getText().toString();
-                loginUser(username, password);
+                loginUser(email, password);
             }
         });
 
@@ -56,9 +56,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void loginUser(String username, String password) {
-        Log.i(TAG, "Attempting to login user " + username);
-        ParseUser.logInInBackground(username, password, new LogInCallback() {
+    private void loginUser(String email, String password) {
+        Log.i(TAG, "Attempting to login user " + email);
+        ParseUser.logInInBackground(email, password, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
                 if(e != null){

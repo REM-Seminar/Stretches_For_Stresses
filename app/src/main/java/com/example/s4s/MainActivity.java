@@ -3,14 +3,18 @@ package com.example.s4s;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.s4s.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener;
 
 public class MainActivity extends AppCompatActivity {
+
+    final FragmentManager fragmentManager = getSupportFragmentManager();
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.homeNavigation:
                         break;
                     case R.id.profileNavigation:
+                        fragment = new ProfileFragment();
                         break;
                     case R.id.catalogNavigation:
                     default:
