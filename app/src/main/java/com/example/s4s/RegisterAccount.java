@@ -58,12 +58,12 @@ public class RegisterAccount extends AppCompatActivity {
                 if (e == null) {
                     Log.e(TAG, "Issue with Login", e);
                 }
-                goMainActivity();
+                goLoginActivity();
             }
         });
     }
 
-    private void goMainActivity() {
+    private void goLoginActivity() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
         finish();
