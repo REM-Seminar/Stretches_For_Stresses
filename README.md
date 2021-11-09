@@ -225,5 +225,5 @@ query.getObjectInBackground (withId:"nIdwka") {email: [PFObject]?, error: Error?
 ```
 
 ## Progress Gifs
-### Login and Register Screens 
+### Navigation Tab 
 <img src="https://github.com/REM-Seminar/Stretches_For_Stresses/blob/master/s4s.gif" width=600>
