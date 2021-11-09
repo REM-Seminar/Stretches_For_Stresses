@@ -10,11 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.parse.ParseClassName;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
-public class RegisterAccount extends AppCompatActivity {
+@ParseClassName("User")
+public class RegisterAccount extends AppCompatActivity{
 
     public static final String TAG = "RegisterAccount";
     EditText userName;
@@ -64,7 +66,7 @@ public class RegisterAccount extends AppCompatActivity {
     }
 
     private void goLoginActivity() {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
         finish();
     }
