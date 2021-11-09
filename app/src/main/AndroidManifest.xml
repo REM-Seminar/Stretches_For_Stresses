@@ -16,6 +16,9 @@
         android:theme="@style/splashScreen"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".data.model.CatalogScreen"
+            android:exported="true" />
+        <activity
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
