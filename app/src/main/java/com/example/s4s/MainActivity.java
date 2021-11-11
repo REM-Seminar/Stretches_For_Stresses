@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.s4s.fragments.CatalogFragment;
+import com.example.s4s.fragments.CatalogScreenFragment;
 import com.example.s4s.fragments.HomeFragment;
 import com.example.s4s.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.profileNavigation:
                         fragment = new ProfileFragment();
                         break;
+                        /*  case R.id.CatalogScreenFragment:
+                        fragment = new CatalogScreenFragment();
+                        break;  */
                     case R.id.catalogNavigation:
                     default:
                         fragment = new CatalogFragment();

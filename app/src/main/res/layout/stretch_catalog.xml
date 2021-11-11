@@ -5,28 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/stretchImage"
+        android:layout_marginBottom="-603dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    </androidx.recyclerview.widget.RecyclerView>
 
-            <TextView
-                android:id="@+id/StretchName"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:text="Enter Name of Strech" />
+    <TextView
+        android:id="@+id/stretchName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Enter Name of Strech" />
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
-
-        </LinearLayout>
-    </ScrollView>
+    <ImageView
+        android:id="@+id/stretchImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </RelativeLayout>
