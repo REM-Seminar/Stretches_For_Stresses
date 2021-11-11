@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/StretchName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Name of Strech" />
+
+            <ImageView
+                android:id="@+id/StretchImage"
+                android:layout_width="match_parent"
+                android:layout_height="304dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:text="Description" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
