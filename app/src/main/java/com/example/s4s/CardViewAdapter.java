@@ -15,12 +15,12 @@ import com.parse.ParseFile;
 
 import java.util.List;
 
-public class StretchesAdapter extends RecyclerView.Adapter<StretchesAdapter.ViewHolder> {
+public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHolder> {
 
     private Context context;
     private List<Stretches> stretches;
 
-    public StretchesAdapter(Context context, List<Stretches> stretches) {
+    public CardViewAdapter(Context context, List<Stretches> stretches) {
         this.context = context;
         this.stretches = stretches;
     }
@@ -28,7 +28,7 @@ public class StretchesAdapter extends RecyclerView.Adapter<StretchesAdapter.View
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.activity_stretches, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.card_view, parent, false);
         return new ViewHolder(view);
     }
 
@@ -40,7 +40,7 @@ public class StretchesAdapter extends RecyclerView.Adapter<StretchesAdapter.View
 
     @Override
     public int getItemCount() {
-        return 0;
+        return stretches.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
@@ -51,9 +51,9 @@ public class StretchesAdapter extends RecyclerView.Adapter<StretchesAdapter.View
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            StretchName = itemView.findViewById(R.id.StretchName);
-            description = itemView.findViewById(R.id.description);
-            StretchImage = itemView.findViewById(R.id.StretchImage);
+            StretchName = itemView.findViewById(R.id.stretchTitle);
+            description = itemView.findViewById(R.id.stretchDescription);
+            StretchImage = itemView.findViewById(R.id.stretchImage);
         }
 
         public void bind(Stretches stretch) {

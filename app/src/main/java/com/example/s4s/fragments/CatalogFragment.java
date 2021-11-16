@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,5 +48,37 @@ public class CatalogFragment extends Fragment {
         ibLowerBody = view.findViewById(R.id.ibLowerBody);
         ibFullBody = view.findViewById(R.id.ibFullBody);
         ibBack = view.findViewById(R.id.ibBack);
+
+        ibUpperBody.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "onClick upperbody button");
+                new UpperBody();
+            }
+        });
+
+        ibLowerBody.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "onClick lowerbody button");
+                new UpperBody();
+            }
+        });
+
+        ibFullBody.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "onClick fullbody button");
+                new UpperBody();
+            }
+        });
+
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "onClick back button");
+                new UpperBody();
+            }
+        });
     }
 }

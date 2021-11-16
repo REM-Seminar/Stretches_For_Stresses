@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
+        bottomNavigationView.setSelectedItemId(R.id.homeNavigation);
     }
 
 }
