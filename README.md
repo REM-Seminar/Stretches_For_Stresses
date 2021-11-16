@@ -33,7 +33,7 @@ Stretches for Stresses is a mobile application that would encourage and instruct
 - [ ] User can select which area of the body they'd like to stretch
 - [x] User can Log into and logout of app
 - [x] User can Sign-up to app
-- [x] Chime and Splash screen when open
+- [x] Splash screen when open
 - [ ] Repository to view the previous stretches
 
 **Optional Nice-to-have Stories**
