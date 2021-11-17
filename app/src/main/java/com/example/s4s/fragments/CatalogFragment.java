@@ -1,5 +1,6 @@
 package com.example.s4s.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.s4s.R;
+import com.example.s4s.RegisterAccount;
+import com.example.s4s.UpperBody;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,7 +56,7 @@ public class CatalogFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "onClick upperbody button");
-                new UpperBody();
+                goUpperBodyActivity();
             }
         });
 
@@ -61,7 +64,6 @@ public class CatalogFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "onClick lowerbody button");
-                new UpperBody();
             }
         });
 
@@ -69,7 +71,7 @@ public class CatalogFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "onClick fullbody button");
-                new UpperBody();
+
             }
         });
 
@@ -77,8 +79,13 @@ public class CatalogFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "onClick back button");
-                new UpperBody();
+
             }
         });
+    }
+
+    private void goUpperBodyActivity() {
+        Intent i = new Intent(getActivity(), UpperBody.class);
+        startActivity(i);
     }
 }

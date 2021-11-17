@@ -13,14 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.parse.ParseFile;
 
+import java.security.AccessControlContext;
 import java.util.List;
 
-public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHolder> {
+public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> {
 
     private Context context;
     private List<Stretches> stretches;
 
-    public CardViewAdapter(UpperBody upperBody, List<Stretches> stretches) {
+    public ListViewAdapter(Context context, List<Stretches> stretches) {
         this.context = context;
         this.stretches = stretches;
     }
@@ -28,12 +29,15 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.card_view, parent, false);
-        return new ViewHolder(view);
+        return new ViewHolder(LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.list_view, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        //holder.StretchName.setText(stretches.get(position).getTitle());
+        //holder.StretchImage.setImage(stretches.get(position).getImage());
+        //holder.description.setText(stretches.get(position).getDescription());
         Stretches stretch = stretches.get(position);
         holder.bind(stretch);
     }

@@ -33,6 +33,9 @@
         <activity
             android:name=".RegisterAccount"
             android:exported="true" />
+        <activity
+            android:name=".UpperBody"
+            android:exported="false" />
     </application>
 
 </manifest>
