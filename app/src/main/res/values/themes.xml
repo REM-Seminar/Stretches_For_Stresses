@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="splashScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/black</item>
-        <item name="colorAccent">@color/purple_500</item>
-        <item name="android:statusBarColor">@color/teal_200</item>
+        <item name="colorPrimary">@color/light_green</item>
+        <item name="colorPrimaryDark">@color/mustard_yellow</item>
+        <item name="colorAccent">@color/light_beige_yellow</item>
+        <item name="android:statusBarColor">@color/pale_light_green</item>
     </style>
 </resources>

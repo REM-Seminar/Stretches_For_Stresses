@@ -13,7 +13,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="99dp"
         android:layout_marginTop="193dp"
         android:ems="10"
         android:hint="Name"
@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="99dp"
         android:layout_marginTop="246dp"
         android:ems="10"
         android:hint="E-mail"
@@ -46,20 +47,6 @@
         android:inputType="textPassword"
         android:minHeight="48dp" />
 
-    <TextView
-        android:id="@+id/goalstv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/userPassword"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginBottom="262dp"
-        android:text="Enter Goals Here:"
-        android:textSize="16sp" />
-
     <EditText
         android:id="@+id/goalsEntry"
         android:layout_width="wrap_content"
@@ -69,6 +56,7 @@
         android:layout_marginBottom="171dp"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="Enter Your Goals Here "
         android:inputType="textMultiLine"
         android:minHeight="48dp" />
 
@@ -88,11 +76,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="134dp"
-        android:fontFamily="sans-serif-black"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="135dp"
+        android:fontFamily="cursive"
         android:text="Stretches for Stresses"
-        android:textSize="30sp" />
+        android:textColor="#6aa84f"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView"

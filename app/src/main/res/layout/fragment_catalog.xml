@@ -14,6 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="25dp"
+        android:fontFamily="sans-serif-light"
         android:text="Select Your Focus Area!"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
