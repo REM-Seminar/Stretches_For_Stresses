@@ -10,6 +10,7 @@ public class Stretches extends ParseObject {
     public static final String KEY_DESCRIPTION = "description";
     public static final String KEY_IMAGE = "image";
     public static final String KEY_TITLE = "title";
+    public static final String KEY_TYPE = "type";
 
     public String getDescription(){ return getString(KEY_DESCRIPTION ); }
 
@@ -28,5 +29,7 @@ public class Stretches extends ParseObject {
     public void setTitle(String title){
         put(KEY_TITLE, title);
     }
+
+    public String getType(){ return getString(KEY_TYPE); }
 
 }

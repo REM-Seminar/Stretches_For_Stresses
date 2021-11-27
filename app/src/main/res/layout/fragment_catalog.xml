@@ -21,59 +21,61 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="55dp" />
 
-    <ImageButton
-        android:id="@+id/ibUpperBody"
-        android:layout_width="194dp"
-        android:layout_height="194dp"
-        android:layout_below="@+id/ibLowerBody"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="159dp" />
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="657dp"
+        android:layout_below="@+id/tvSelect"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:foregroundGravity="center_horizontal">
 
-    <ImageButton
-        android:id="@+id/ibLowerBody"
-        android:layout_width="194dp"
-        android:layout_height="194dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="100dp"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="161dp" />
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="194dp"
+            android:layout_height="194dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="341dp" />
 
-    <ImageButton
-        android:id="@+id/ibFullBody"
-        android:layout_width="194dp"
-        android:layout_height="194dp"
-        android:layout_below="@+id/ibBack"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_toEndOf="@+id/ibUpperBody"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="341dp" />
+        <ImageButton
+            android:id="@+id/ibFullBody"
+            android:layout_width="194dp"
+            android:layout_height="194dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="341dp" />
 
-    <ImageButton
-        android:id="@+id/ibBack"
-        android:layout_width="173dp"
-        android:layout_height="194dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_toEndOf="@+id/ibLowerBody"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="341dp" />
+        <ImageButton
+            android:id="@+id/ibLowerBody"
+            android:layout_width="194dp"
+            android:layout_height="194dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="100dp"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:layout_editor_absoluteX="220dp"
+            tools:layout_editor_absoluteY="161dp" />
+
+        <ImageButton
+            android:id="@+id/ibUpperBody"
+            android:layout_width="194dp"
+            android:layout_height="194dp"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="159dp" />
+    </androidx.gridlayout.widget.GridLayout>
 
 </RelativeLayout>

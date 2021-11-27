@@ -16,7 +16,7 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UpperBody extends AppCompatActivity implements ListViewAdapter.OnStretchListener {
+public class Back extends AppCompatActivity implements ListViewAdapter.OnStretchListener {
 
     public static final String TAG = "UpperBody";
     RecyclerView rvFocusArea;
@@ -30,7 +30,7 @@ public class UpperBody extends AppCompatActivity implements ListViewAdapter.OnSt
         setContentView(R.layout.focus_area);
         rvFocusArea = findViewById(R.id.rvFocusArea);
         FocusTitle = findViewById(R.id.focusTitle);
-        FocusTitle.setText("Upper Body");
+        FocusTitle.setText("Back");
 
         allStretches = new ArrayList<>();
         adapter = new ListViewAdapter(this, allStretches, this);
@@ -44,7 +44,7 @@ public class UpperBody extends AppCompatActivity implements ListViewAdapter.OnSt
     private void queryStretches() {
         ParseQuery<Stretches> query = ParseQuery.getQuery(Stretches.class);
         query.addAscendingOrder(Stretches.KEY_TITLE);
-        query.whereEqualTo("type", "UpperBody");
+        query.whereEqualTo("type", "Back");
         query.findInBackground(new FindCallback<Stretches>() {
             @Override
             public void done(List<Stretches> stretches, ParseException e) {

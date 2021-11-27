@@ -14,6 +14,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.s4s.Back;
+import com.example.s4s.FullBody;
+import com.example.s4s.LowerBody;
 import com.example.s4s.R;
 import com.example.s4s.RegisterAccount;
 import com.example.s4s.UpperBody;
@@ -64,6 +67,7 @@ public class CatalogFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "onClick lowerbody button");
+                goLowerBodyActivity();
             }
         });
 
@@ -71,7 +75,7 @@ public class CatalogFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "onClick fullbody button");
-
+                goFullBodyActivity();
             }
         });
 
@@ -79,9 +83,24 @@ public class CatalogFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "onClick back button");
-
+                goBackActivity();
             }
         });
+    }
+
+    private void goFullBodyActivity() {
+        Intent i = new Intent(getActivity(), FullBody.class);
+        startActivity(i);
+    }
+
+    private void goBackActivity() {
+        Intent i = new Intent(getActivity(), Back.class);
+        startActivity(i);
+    }
+
+    private void goLowerBodyActivity() {
+        Intent i = new Intent(getActivity(), LowerBody.class);
+        startActivity(i);
     }
 
     private void goUpperBodyActivity() {

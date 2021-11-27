@@ -16,6 +16,15 @@
         android:theme="@style/splashScreen"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Back"
+            android:exported="false" />
+        <activity
+            android:name=".FullBody"
+            android:exported="false" />
+        <activity
+            android:name=".LowerBody"
+            android:exported="false" />
+        <activity
             android:name=".DetailedView"
             android:exported="false" />
         <activity
