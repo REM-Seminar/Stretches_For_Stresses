@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -17,12 +18,11 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UpperBody extends AppCompatActivity {
+public class UpperBody extends AppCompatActivity implements ListViewAdapter.OnStretchListener {
 
     public static final String TAG = "UpperBody";
     RecyclerView rvUpper;
     ListViewAdapter adapter;
-    CardViewAdapter card;
     List<Stretches> allStretches;
 
     @Override
@@ -32,7 +32,7 @@ public class UpperBody extends AppCompatActivity {
         rvUpper = findViewById(R.id.rvUpper);
 
         allStretches = new ArrayList<>();
-        adapter = new ListViewAdapter(this, allStretches);
+        adapter = new ListViewAdapter(this, allStretches, this);
         rvUpper.setAdapter(adapter);
 
         rvUpper.setLayoutManager(new LinearLayoutManager(this));
@@ -56,5 +56,12 @@ public class UpperBody extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
         });
+    }
+
+    @Override
+    public void onStretchClick(int position) {
+        Intent i = new Intent(this, DetailedView.class);
+        i.putExtra("stretch", allStretches.get(position));
+        startActivity(i);
     }
 }

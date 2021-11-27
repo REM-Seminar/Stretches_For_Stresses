@@ -16,6 +16,9 @@
         android:theme="@style/splashScreen"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DetailedView"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
