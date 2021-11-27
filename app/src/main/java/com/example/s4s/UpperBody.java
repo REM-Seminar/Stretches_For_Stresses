@@ -20,17 +20,21 @@ import java.util.List;
 public class UpperBody extends AppCompatActivity {
 
     public static final String TAG = "UpperBody";
-    protected ListViewAdapter adapter;
+    RecyclerView rvUpper;
+    ListViewAdapter adapter;
+    CardViewAdapter card;
     List<Stretches> allStretches;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upperbody);
+        rvUpper = findViewById(R.id.rvUpper);
 
         allStretches = new ArrayList<>();
-        RecyclerView rvUpper = findViewById(R.id.rvUpper);
-        rvUpper.setAdapter(new ListViewAdapter(this,allStretches));
+        adapter = new ListViewAdapter(this, allStretches);
+        rvUpper.setAdapter(adapter);
+
         rvUpper.setLayoutManager(new LinearLayoutManager(this));
 
         queryStretches();
@@ -49,7 +53,7 @@ public class UpperBody extends AppCompatActivity {
                     Log.i(TAG, "Title: " + stretch.getTitle() + ", Description: " + stretch.getDescription());
                 }
                 allStretches.addAll(stretches);
-                //adapter.notifyDataSetChanged();
+                adapter.notifyDataSetChanged();
             }
         });
     }

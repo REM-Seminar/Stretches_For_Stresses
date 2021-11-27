@@ -35,7 +35,7 @@
             android:exported="true" />
         <activity
             android:name=".UpperBody"
-            android:exported="false" />
+            android:exported="true" />
     </application>
 
 </manifest>

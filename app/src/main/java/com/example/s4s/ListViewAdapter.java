@@ -14,14 +14,15 @@ import com.bumptech.glide.Glide;
 import com.parse.ParseFile;
 
 import java.security.AccessControlContext;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> {
 
-    private Context context;
-    private List<Stretches> stretches;
+    private final Context context;
+    private final List<Stretches> stretches;
 
-    public ListViewAdapter(Context context, List<Stretches> stretches) {
+    public ListViewAdapter(Context context,List<Stretches> stretches) {
         this.context = context;
         this.stretches = stretches;
     }
@@ -29,17 +30,16 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_view, parent, false));
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_view, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        //holder.StretchName.setText(stretches.get(position).getTitle());
-        //holder.StretchImage.setImage(stretches.get(position).getImage());
-        //holder.description.setText(stretches.get(position).getDescription());
         Stretches stretch = stretches.get(position);
-        holder.bind(stretch);
+        holder.StretchTitle.setText(stretch.getTitle());
+        holder.StretchDescription.setText(stretch.getDescription());
+        ParseFile image = stretch.getImage();
     }
 
     @Override
@@ -47,26 +47,17 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         return stretches.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView StretchName;
+        private TextView StretchTitle;
         private ImageView StretchImage;
-        private TextView description;
+        private TextView StretchDescription;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            StretchName = itemView.findViewById(R.id.stretchTitle);
-            description = itemView.findViewById(R.id.stretchDescription);
+            StretchTitle = itemView.findViewById(R.id.stretchTitle);
+            StretchDescription = itemView.findViewById(R.id.stretchDescription);
             StretchImage = itemView.findViewById(R.id.stretchImage);
-        }
-
-        public void bind(Stretches stretch) {
-            description.setText(stretch.getDescription());
-            StretchName.setText(stretch.getTitle());
-            ParseFile image = stretch.getImage();
-            if (image != null) {
-                Glide.with(context).load(stretch.getImage().getUrl()).into(StretchImage);
-            }
         }
     }
 }

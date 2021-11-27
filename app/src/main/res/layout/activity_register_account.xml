@@ -70,7 +70,7 @@
         android:text="REGISTER" />
 
     <TextView
-        android:id="@+id/Title"
+        android:id="@+id/stretchTitle"
         android:layout_width="wrap_content"
         android:layout_height="61dp"
         android:layout_alignParentStart="true"
