@@ -1,18 +1,25 @@
 package com.example.s4s.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.s4s.Back;
+import com.example.s4s.FullBody;
+import com.example.s4s.LowerBody;
 import com.example.s4s.R;
+import com.example.s4s.RegisterAccount;
+import com.example.s4s.UpperBody;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -47,5 +54,57 @@ public class CatalogFragment extends Fragment {
         ibLowerBody = view.findViewById(R.id.ibLowerBody);
         ibFullBody = view.findViewById(R.id.ibFullBody);
         ibBack = view.findViewById(R.id.ibBack);
+
+        ibUpperBody.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "onClick upperbody button");
+                goUpperBodyActivity();
+            }
+        });
+
+        ibLowerBody.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "onClick lowerbody button");
+                goLowerBodyActivity();
+            }
+        });
+
+        ibFullBody.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "onClick fullbody button");
+                goFullBodyActivity();
+            }
+        });
+
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "onClick back button");
+                goBackActivity();
+            }
+        });
+    }
+
+    private void goFullBodyActivity() {
+        Intent i = new Intent(getActivity(), FullBody.class);
+        startActivity(i);
+    }
+
+    private void goBackActivity() {
+        Intent i = new Intent(getActivity(), Back.class);
+        startActivity(i);
+    }
+
+    private void goLowerBodyActivity() {
+        Intent i = new Intent(getActivity(), LowerBody.class);
+        startActivity(i);
+    }
+
+    private void goUpperBodyActivity() {
+        Intent i = new Intent(getActivity(), UpperBody.class);
+        startActivity(i);
     }
 }

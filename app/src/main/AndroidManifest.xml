@@ -16,7 +16,19 @@
         android:theme="@style/splashScreen"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".CatalogScreenFragment"
+            android:name=".Back"
+            android:exported="false" />
+        <activity
+            android:name=".FullBody"
+            android:exported="false" />
+        <activity
+            android:name=".LowerBody"
+            android:exported="false" />
+        <activity
+            android:name=".DetailedView"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,6 +41,12 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegisterAccount"
+            android:exported="true" />
+        <activity
+            android:name=".UpperBody"
             android:exported="true" />
     </application>
 

@@ -30,10 +30,10 @@ Stretches for Stresses is a mobile application that would encourage and instruct
 - [ ] Milestone feature for when users complete a certain amount of stretches
 - [ ] Add motivation/encouraging quote of the day 
 - [ ] User can swipe to next stretch in app
-- [ ] User can select which area of the body they'd like to stretch
+- [x] User can select which area of the body they'd like to stretch
 - [x] User can Log into and logout of app
 - [x] User can Sign-up to app
-- [ ] Chime when open
+- [x] Splash screen when open
 - [ ] Repository to view the previous stretches
 
 **Optional Nice-to-have Stories**
@@ -225,5 +225,5 @@ query.getObjectInBackground (withId:"nIdwka") {email: [PFObject]?, error: Error?
 ```
 
 ## Progress Gifs
-### Navigation Tab 
+### Splash Screen/ Saves previous user login/ Screen for each focus area 
 <img src="https://github.com/REM-Seminar/Stretches_For_Stresses/blob/master/s4s.gif" width=600>

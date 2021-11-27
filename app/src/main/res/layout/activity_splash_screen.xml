@@ -16,6 +16,5 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:background="@color/black"
         app:srcCompat="@drawable/s4s_splash" />
 </RelativeLayout>
