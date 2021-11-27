@@ -6,10 +6,12 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stretches"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignBottom="@+id/stretchImage"
-        android:layout_marginBottom="-603dp">
+        android:layout_marginBottom="-603dp"
+        android:padding="8dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 

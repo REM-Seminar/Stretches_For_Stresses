@@ -39,7 +39,7 @@
         android:text="displayUsername" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/displayPassword"
         android:layout_width="243dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -50,7 +50,7 @@
         android:text="Password" />
 
     <TextView
-        android:id="@+id/emailAddress"
+        android:id="@+id/displayEmail"
         android:layout_width="239dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -60,7 +60,7 @@
         android:text="Email Address" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/profileView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -70,7 +70,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/welcomeMessage"
+        android:id="@+id/displayWelcomeMessage"
         android:layout_width="178dp"
         android:layout_height="47dp"
         android:layout_alignParentTop="true"

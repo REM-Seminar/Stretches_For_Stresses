@@ -16,7 +16,7 @@
         android:theme="@style/splashScreen"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".CatalogScreenFragment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
