@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.s4s.R;
 import com.example.s4s.Stretches;
-import com.example.s4s.StretchesAdapter;
 import com.parse.ParseClassName;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -32,7 +31,7 @@ public class StretchCatalogFragment extends Fragment {
     private RecyclerView stretches;
 
     public StretchCatalogFragment() {
-
+        // Required empty public constructor
     }
 
 

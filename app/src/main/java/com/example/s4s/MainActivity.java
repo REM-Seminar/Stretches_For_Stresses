@@ -37,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.profileNavigation:
                         fragment = new ProfileFragment();
                         break;
-                        /*  case R.id.CatalogScreenFragment:
-                        fragment = new CatalogScreenFragment();
-                        break;  */
                     case R.id.catalogNavigation:
                     default:
                         fragment = new CatalogFragment();

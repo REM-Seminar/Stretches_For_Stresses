@@ -1,5 +1,6 @@
 package com.example.s4s.fragments;
 
+import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -7,11 +8,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.os.CountDownTimer;
+import android.os.IBinder;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.example.s4s.Back;
@@ -20,6 +26,10 @@ import com.example.s4s.LowerBody;
 import com.example.s4s.R;
 import com.example.s4s.RegisterAccount;
 import com.example.s4s.UpperBody;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,6 +44,13 @@ public class CatalogFragment extends Fragment {
     ImageButton ibLowerBody;
     ImageButton ibFullBody;
     ImageButton ibBack;
+
+    ImageView stretchImage2;
+    SeekBar timer_sb;
+    TextView text_view_countdown;
+    Button startAndStopButton;
+    CountDownTimer countDownTimer;
+    Boolean counterIsActive;
 
     public CatalogFragment() {
         // Required empty public constructor
@@ -107,4 +124,80 @@ public class CatalogFragment extends Fragment {
         Intent i = new Intent(getActivity(), UpperBody.class);
         startActivity(i);
     }
+
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        View view = null;
+        text_view_countdown = view.findViewById(R.id.text_view_countdown);
+        stretchImage2 = view.findViewById(R.id.stretchImage2);
+        startAndStopButton = view.findViewById(R.id.startAndStopButton);
+        timer_sb = view.findViewById(R.id.timer_sb);
+        timer_sb.setMax(60);
+        timer_sb.setProgress(0);
+        timer_sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                update(progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+    }
+
+    private void update(int progress) {
+        int minutes = progress / 60;
+        int seconds = progress % 60;
+        String secondsFinal = "";
+        if(seconds <=5) {
+            secondsFinal = "0" + seconds;
+        }else{
+            secondsFinal = "" + seconds;
+        }
+        timer_sb.setProgress(progress);
+        text_view_countdown.setText("" + minutes + ":" + secondsFinal);
+    }
+
+    public void start_timer(View view){
+        if (counterIsActive == false) {
+            counterIsActive = true;
+            timer_sb.setEnabled(false);
+            startAndStopButton.setText("STOP");
+            countDownTimer = new CountDownTimer(timer_sb.getProgress() * 100, 100) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    update((int) millisUntilFinished / 1000);
+                }
+
+                @Override
+                public void onFinish() {
+                    reset();
+                }
+            }.start();
+        } else {
+            reset();
+        }
+    }
+
+
+    private void reset() {
+        text_view_countdown.setText("0:30");
+        timer_sb.setProgress(30);
+        countDownTimer.cancel();
+        startAndStopButton.setText("START");
+        timer_sb.setEnabled(true);
+        counterIsActive = false;
+    }
+
 }
+
+
