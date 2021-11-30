@@ -22,12 +22,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
-        bottomNavigationView = findViewById(R.id.bottomNavigation);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Fragment fragment;
@@ -45,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
                 return true;
+
             }
         });
         bottomNavigationView.setSelectedItemId(R.id.homeNavigation);
