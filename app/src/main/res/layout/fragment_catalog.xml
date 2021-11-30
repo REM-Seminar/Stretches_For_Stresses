@@ -37,9 +37,10 @@
             android:layout_marginTop="10dp"
             app:layout_column="0"
             app:layout_row="1"
-            app:srcCompat="@drawable/ic_launcher_foreground"
+            app:srcCompat="@drawable/backimage"
             tools:layout_editor_absoluteX="222dp"
-            tools:layout_editor_absoluteY="341dp" />
+            tools:layout_editor_absoluteY="341dp"
+            android:scaleType="fitXY"/>
 
         <ImageButton
             android:id="@+id/ibFullBody"
@@ -49,9 +50,10 @@
             android:layout_marginTop="10dp"
             app:layout_column="1"
             app:layout_row="1"
-            app:srcCompat="@drawable/ic_launcher_foreground"
+            app:srcCompat="@drawable/fullbody"
             tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="341dp" />
+            tools:layout_editor_absoluteY="341dp"
+            android:scaleType="fitXY"/>
 
         <ImageButton
             android:id="@+id/ibLowerBody"
@@ -61,9 +63,10 @@
             android:layout_marginTop="100dp"
             app:layout_column="0"
             app:layout_row="0"
-            app:srcCompat="@drawable/ic_launcher_foreground"
+            app:srcCompat="@drawable/lowerbodyimage"
             tools:layout_editor_absoluteX="220dp"
-            tools:layout_editor_absoluteY="161dp" />
+            tools:layout_editor_absoluteY="161dp"
+            android:scaleType="fitXY"/>
 
         <ImageButton
             android:id="@+id/ibUpperBody"
@@ -73,9 +76,10 @@
             android:orientation="vertical"
             app:layout_column="1"
             app:layout_row="0"
-            app:srcCompat="@drawable/ic_launcher_foreground"
+            app:srcCompat="@drawable/upperbodyimage"
             tools:layout_editor_absoluteX="27dp"
-            tools:layout_editor_absoluteY="159dp" />
+            tools:layout_editor_absoluteY="159dp"
+            android:scaleType="fitXY"/>
     </androidx.gridlayout.widget.GridLayout>
 
 </RelativeLayout>

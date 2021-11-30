@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.example.s4s.R;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +30,7 @@ public class HomeFragment extends Fragment {
     ImageButton ibSOTD;
     ImageButton ibStretchCatalog;
     TextView tvQOTD;
+    Random random = new Random();
 
     public HomeFragment(){
 
@@ -48,5 +50,40 @@ public class HomeFragment extends Fragment {
         ibSOTD = view.findViewById(R.id.ibSOTD);
         ibStretchCatalog = view.findViewById(R.id.ibStretchCatalog);
         tvQOTD = view.findViewById(R.id.tvQOTD);
+
+        displayQuote();
+    }
+
+    public void displayQuote(){
+        int randNum = random.nextInt((8+1)-1) + 1;
+        String randQuote = "";
+
+        switch (randNum){
+            case 1:
+                randQuote = getString(R.string.q1);
+                break;
+            case 2:
+                randQuote = getString(R.string.q2);
+                break;
+            case 3:
+                randQuote = getString(R.string.q3);
+                break;
+            case 4:
+                randQuote = getString(R.string.q4);
+                break;
+            case 5:
+                randQuote = getString(R.string.q5);
+                break;
+            case 6:
+                randQuote = getString(R.string.q6);
+                break;
+            case 7:
+                randQuote = getString(R.string.q7);
+                break;
+            case 8:
+                randQuote = getString(R.string.q8);
+                break;
+        }
+        tvQOTD.setText(randQuote);
     }
 }

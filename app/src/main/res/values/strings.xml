@@ -11,4 +11,14 @@
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name= "q1">The hallmark of successful people is that they are always stretching themselves to learn new things. - Carol S. Dweck</string>
+    <string name= "q2">Stretching exercises promote flexibility, so you move fluidly. - Denise Austin</string>
+    <string name= "q3">You are only as young as your spine is flexible. - Joseph Pilates</string>
+    <string name= "q4">Even if you do not have time for a big workout, stretching in the morning and night really changes your body. - Erin Heatherton</string>
+    <string name= "q5">You were created to excel. There’s no limit to how high you can go in life. Keep stretching to the next level. - Joel Osteen</string>
+    <string name= "q6">Yoga is the fountain of youth. You are only as young as your spine is flexible. - Bob Harper</string>
+    <string name= "q7">Its hard to stay flexible if you do not stretch. I think if you train the right way you will be flexible. There are people that do not appreciate the value of stretching. I think it is very important. - Darren Shahlavi</string>
+    <string name= "q8">Success is due to our stretching to the challenges of life. Failure comes when we shrink from them. - John C. Maxwell</string>
+
 </resources>

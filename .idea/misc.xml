@@ -21,6 +21,13 @@
         <entry key="..\:/Users/Student/AndroidStudioProjects/Stretches_For_Stresses/app/src/main/res/mipmap-anydpi-v26/ic_splash.xml" value="0.2203125" />
         <entry key="..\:/Users/Student/AndroidStudioProjects/Stretches_For_Stresses/app/src/main/res/mipmap-anydpi-v26/ic_splash_round.xml" value="0.2203125" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.24259259259259258" />
+        <entry key="app/src/main/res/drawable/ic_baseline_house_24.xml" value="0.24259259259259258" />
+        <entry key="app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.24259259259259258" />
+        <entry key="app/src/main/res/drawable/ic_baseline_self_improvement_24.xml" value="0.24259259259259258" />
+        <entry key="app/src/main/res/drawable/ic_baseline_supervised_user_circle_24.xml" value="0.24259259259259258" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.24259259259259258" />
+        <entry key="app/src/main/res/drawable/lowerbodyimage.xml" value="0.24259259259259258" />
         <entry key="app/src/main/res/layout/activity_detailed_view.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_focus_area.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.3098958333333333" />
@@ -28,9 +35,10 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_register_account.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_upperbody.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/card_view.xml" value="0.2953125" />
-        <entry key="app/src/main/res/layout/fragment_catalog.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/fragment_catalog.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/list_view.xml" value="0.2953125" />
