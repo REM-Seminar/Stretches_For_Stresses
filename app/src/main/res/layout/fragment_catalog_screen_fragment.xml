@@ -7,7 +7,7 @@
 
 
     <TextView
-        android:id="@+id/text_view_countdown"
+        android:id="@+id/tvCountdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -30,7 +30,7 @@
         android:layout_marginBottom="193dp" />
 
     <Button
-        android:id="@+id/startAndStopButton"
+        android:id="@+id/timerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"

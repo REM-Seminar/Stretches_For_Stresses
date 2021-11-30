@@ -1,6 +1,5 @@
 package com.example.s4s.fragments;
 
-import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,7 +8,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.os.CountDownTimer;
-import android.os.IBinder;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,12 +22,7 @@ import com.example.s4s.Back;
 import com.example.s4s.FullBody;
 import com.example.s4s.LowerBody;
 import com.example.s4s.R;
-import com.example.s4s.RegisterAccount;
 import com.example.s4s.UpperBody;
-
-import android.app.Service;
-import android.content.Intent;
-import android.os.IBinder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -128,9 +121,9 @@ public class CatalogFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = null;
-        text_view_countdown = view.findViewById(R.id.text_view_countdown);
+        text_view_countdown = view.findViewById(R.id.tvCountdown);
         stretchImage2 = view.findViewById(R.id.stretchImage2);
-        startAndStopButton = view.findViewById(R.id.startAndStopButton);
+        startAndStopButton = view.findViewById(R.id.timerButton);
         timer_sb = view.findViewById(R.id.timer_sb);
         timer_sb.setMax(60);
         timer_sb.setProgress(0);
