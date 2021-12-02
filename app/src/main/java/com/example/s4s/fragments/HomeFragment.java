@@ -55,6 +55,7 @@ public class HomeFragment extends Fragment {
     }
 
     public void displayQuote(){
+
         int randNum = random.nextInt((8+1)-1) + 1;
         String randQuote = "";
 
