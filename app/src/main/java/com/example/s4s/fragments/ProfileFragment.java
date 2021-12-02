@@ -49,11 +49,11 @@ public class ProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         btnSignout = view.findViewById(R.id.btnSignout);
 
-        displayUsername = view.findViewById(R.id.displayUsername);
-        displayPassword = view.findViewById(R.id.displayPassword);
-        displayEmail = view.findViewById(R.id.displayEmail);
+        //displayUsername = view.findViewById(R.id.displayUsername);
+        //displayPassword = view.findViewById(R.id.displayPassword);
+        //displayEmail = view.findViewById(R.id.displayEmail);
         displayWelcomeMessage = view.findViewById(R.id.displayWelcomeMessage);
-        profileView = view.findViewById(R.id.profileView);
+        //profileView = view.findViewById(R.id.profileView);
 
         btnSignout.setOnClickListener(new View.OnClickListener() {
             @Override

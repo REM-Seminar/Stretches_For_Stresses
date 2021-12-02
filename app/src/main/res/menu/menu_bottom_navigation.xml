@@ -9,6 +9,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/catalogNavigation"
+        android:icon="@drawable/ic_baseline_list_24"
         android:title="Catalog"
         app:showAsAction="always" />
     <item

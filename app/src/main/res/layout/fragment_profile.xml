@@ -6,78 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".fragments.ProfileFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-6dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="-1dp" />
-
     <Button
         android:id="@+id/btnSignout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="538dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="550dp"
         android:text="Sign Out" />
 
     <TextView
-        android:id="@+id/displayUsername"
-        android:layout_width="247dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="312dp"
-        android:text="displayUsername" />
-
-    <TextView
-        android:id="@+id/displayPassword"
-        android:layout_width="243dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="348dp"
-        android:text="Password" />
-
-    <TextView
-        android:id="@+id/displayEmail"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="379dp"
-        android:text="Email Address" />
-
-    <ImageView
-        android:id="@+id/profileView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="95dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
         android:id="@+id/displayWelcomeMessage"
-        android:layout_width="178dp"
-        android:layout_height="47dp"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="38dp"
-        android:layout_marginEnd="102dp"
+        android:layout_marginEnd="23dp"
         android:fontFamily="sans-serif-light"
-        android:text="Profile" />
+        android:text="Welcome to Your Profile"
+        android:textSize="34sp" />
 
 </RelativeLayout>
