@@ -28,7 +28,7 @@ Stretches for Stresses is a mobile application that would encourage and instruct
 - [ ] Create Method to Prompt user with a timer for their stretches
 - [x] Demonstrate how stretch is to be performed
 - [ ] Milestone feature for when users complete a certain amount of stretches
-- [ ] Add motivation/encouraging quote of the day 
+- [x] Add motivation/encouraging quote of the day 
 - [ ] User can swipe to next stretch in app
 - [x] User can select which area of the body they'd like to stretch
 - [x] User can Log into and logout of app
